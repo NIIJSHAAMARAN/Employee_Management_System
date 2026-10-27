@@ -1,0 +1,262 @@
+/* .App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+} */
+ @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+:root {
+  --ink: #12343b;
+  --muted: #5f7479;
+  --page: #f1f5f4;
+  --line: #dbe5e3;
+  --brand: #1f7a6d;
+  --brand-dark: #165e54;
+  --brand-soft: #e6f3f0;
+  --danger: #c2412d;
+
+  /* Bootstrap overrides */
+  --bs-body-font-family: 'Plus Jakarta Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --bs-body-color: var(--ink);
+  --bs-body-bg: var(--page);
+  --bs-backdrop-bg: #12343b;
+  --bs-backdrop-opacity: 0.55;
+}
+
+body {
+  background: var(--page);
+  color: var(--ink);
+}
+
+/* ---------- Navbar ---------- */
+.app-nav {
+  background: var(--ink);
+  padding: 0.8rem 0;
+}
+.app-nav .navbar-brand {
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  font-size: 1.1rem;
+  color: #fff;
+}
+.app-nav .navbar-brand::before {
+  content: '';
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin-right: 0.6rem;
+  border-radius: 3px;
+  background: #5fd1bf;
+}
+
+/* ---------- Page heading ---------- */
+.page-head {
+  margin-bottom: 1.25rem;
+}
+.page-head h1 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin: 0;
+}
+.page-head p {
+  margin: 0.15rem 0 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+/* ---------- Buttons ---------- */
+.btn {
+  font-weight: 600;
+  border-radius: 10px;
+}
+.btn-primary {
+  --bs-btn-bg: var(--brand);
+  --bs-btn-border-color: var(--brand);
+  --bs-btn-hover-bg: var(--brand-dark);
+  --bs-btn-hover-border-color: var(--brand-dark);
+  --bs-btn-active-bg: var(--brand-dark);
+  --bs-btn-active-border-color: var(--brand-dark);
+  --bs-btn-disabled-bg: var(--brand);
+  --bs-btn-disabled-border-color: var(--brand);
+  --bs-btn-focus-shadow-rgb: 31, 122, 109;
+}
+.btn-outline-primary {
+  --bs-btn-color: var(--brand);
+  --bs-btn-border-color: var(--brand);
+  --bs-btn-hover-bg: var(--brand);
+  --bs-btn-hover-border-color: var(--brand);
+  --bs-btn-active-bg: var(--brand-dark);
+  --bs-btn-active-border-color: var(--brand-dark);
+  --bs-btn-focus-shadow-rgb: 31, 122, 109;
+}
+.btn-outline-danger {
+  --bs-btn-color: var(--danger);
+  --bs-btn-border-color: var(--danger);
+  --bs-btn-hover-bg: var(--danger);
+  --bs-btn-hover-border-color: var(--danger);
+}
+.btn-danger {
+  --bs-btn-bg: var(--danger);
+  --bs-btn-border-color: var(--danger);
+  --bs-btn-hover-bg: #a63523;
+  --bs-btn-hover-border-color: #a63523;
+}
+.btn-link {
+  color: var(--brand);
+}
+
+/* ---------- Inputs ---------- */
+.form-control {
+  border-color: var(--line);
+  border-radius: 10px;
+  padding: 0.6rem 0.8rem;
+}
+.form-control:focus {
+  border-color: var(--brand);
+  box-shadow: 0 0 0 0.2rem rgba(31, 122, 109, 0.18);
+}
+.form-label {
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+/* ---------- Table ---------- */
+.table-responsive.card {
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  box-shadow: 0 1px 2px rgba(18, 52, 59, 0.05);
+  overflow: hidden;
+}
+.table {
+  --bs-table-bg: transparent;
+  --bs-table-hover-bg: var(--brand-soft);
+}
+.table thead th {
+  background: #f7faf9;
+  color: var(--muted);
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.85rem 1rem;
+  border-bottom: 1px solid var(--line);
+}
+.table td {
+  padding: 0.85rem 1rem;
+  border-color: var(--line);
+}
+.table td.text-end:nth-child(4) {
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+}
+.emp-cell {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.emp-name {
+  font-weight: 600;
+}
+.avatar {
+  flex: 0 0 auto;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: var(--brand-soft);
+  color: var(--brand-dark);
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+.dept-badge {
+  display: inline-block;
+  padding: 0.25rem 0.65rem;
+  border-radius: 999px;
+  background: var(--brand-soft);
+  color: var(--brand-dark);
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+/* ---------- Modals ---------- */
+.modal {
+  overflow-y: auto;
+}
+.modal-content {
+  border: 0;
+  border-radius: 16px;
+  box-shadow: 0 20px 50px rgba(18, 52, 59, 0.25);
+}
+.modal-header,
+.modal-footer {
+  border-color: var(--line);
+}
+.modal-title {
+  font-weight: 700;
+}
+
+/* ---------- Login page ---------- */
+.auth-page {
+  min-height: 100vh;
+  background: linear-gradient(160deg, #12343b 0%, #1c4a4f 100%);
+}
+.auth-card {
+  width: 100%;
+  max-width: 400px;
+  margin: 16px;
+  border: 0;
+  border-radius: 18px;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.3);
+}
+.auth-card h1 {
+  font-weight: 700;
+}
+
+/* ---------- Alerts ---------- */
+.alert {
+  border-radius: 10px;
+}
+
+/* ---------- Small screens ---------- */
+@media (max-width: 576px) {
+  .page-head h1 {
+    font-size: 1.35rem;
+  }
+  .table thead th,
+  .table td {
+    padding: 0.7rem 0.75rem;
+  }
+}
